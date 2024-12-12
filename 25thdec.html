@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chirstmas, Together?!</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fce4ec;  /* Light pink background */
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 0 20px;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 650px;
+      padding: 40px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      color: #F50057;  /* Bold pink for heading */
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    p {
+      font-size: 1.4em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    /* Image Container */
+    .photos {
+      display: flex;
+      justify-content: center;
+      gap: 90px;
+      margin-bottom: 25px;
+    }
+
+    .photos img {
+      width: 120px;
+      height: 120px;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Button Container */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 63.5px;
+      margin-top: 25px;
+    }
+
+    .button {
+      background-color: #F50057;  /* Matching pink color for buttons */
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 15px 40px;
+      font-size: 1.4em;
+      cursor: pointer;
+      width: 150px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .button:hover {
+      background-color: #D81B60;  /* Darker pink for hover effect */
+      transform: translateY(-3px);  /* Slightly lift on hover */
+    }
+
+    /* Input / Textarea Styles */
+    .response-box {
+      margin-top: 35px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #ddd;
+      border-radius: 15px;
+      font-size: 1.2em;
+      resize: vertical;
+      height: 120px;
+      transition: border-color 0.3s ease;
+    }
+
+    textarea:focus {
+      border-color: #F50057;
+      outline: none;
+    }
+
+    /* Footer / Credits */
+    footer {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 50px;
+    }
+
+    /* Floating Stars & Moons */
+    .floating-stars {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      animation: moveStars 10s infinite linear;
+    }
+
+    .floating-stars .star {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: #FFF;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: starAnimation 5s infinite;
+    }
+
+    .floating-moons {
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      animation: moveMoons 15s infinite linear;
+    }
+
+    .floating-moons .moon {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZKkJ5r2-CxrlYbHrU0wPnQj9o_I8NYjRjIQ&s');
+      background-size: cover;
+      opacity: 0.8;
+      animation: moonAnimation 8s infinite;
+    }
+
+    @keyframes starAnimation {
+      0% { transform: translateY(0); opacity: 0.7; }
+      50% { transform: translateY(-30px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.7; }
+    }
+
+    @keyframes moonAnimation {
+      0% { transform: translateX(0); opacity: 0.8; }
+      50% { transform: translateX(-30px); opacity: 1; }
+      100% { transform: translateX(0); opacity: 0.8; }
+    }
+
+    @keyframes moveStars {
+      0% { top: 0; }
+      100% { top: 100%; }
+    }
+
+    @keyframes moveMoons {
+      0% { bottom: -30px; }
+      100% { bottom: -100px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Hii Winiii💖💖!!!</h1>
+    <p>Looks like ammu and appu ain't coming😭😭</p>
+    <p>You Still wanna Spend the Christmas evening together for Writer's Cafe?!☕🌙</p>
+    
+    <!-- Add photos for Yes and No, aligned directly above buttons -->
+    <div class="photos">
+      <img src="https://previews.dropbox.com/p/thumb/ACf4gbw35yiEzd_3OBfbNunIhYRF4ySFcIwxHTW3idfn_wfGxCTPrTZecBlxxwl355h9DoXtnWsBU5qcly28sYbQul5TZa80wLf0v_JofjDZjN959PjRoUB_ScxRDc9yIKqx0OXBjUqyu_CmO67Vf6VOM0L54r8yAqqkzL4t2xulOGLFfrPGsjGcTgiMX_hJ3Ih97mgtb_ppNVATaw3vhpOGU33Ai1XI-SzZ5vdgNs3N7Jcd6JL5thgD3hffYqX-pGQA_sMYlZVpHJhbsx7ClcBDqeuq2gDmQsiB1Ld5WEUROvV3v5d9FQhETqYzZJfVcaL9t2QTZyktINsGWT9JDLDl/p.jpeg?is_prewarmed=true" alt="Her Photo for Yes" />
+      <img src="https://previews.dropbox.com/p/thumb/ACfXO7jpCZF5eCw4gcJi48ZIWcukuhBleezHk0Sqe8dXe8zU4OVEmFy9U6k23K7MEzsThSWvtHmhb5LfGJTQzbit81Mwf2Y4sf-jyOWaooQmy5LxBYM0FCOcN_YbG9BEOqGQaLlvhzVu4bk8XwZmo2g6P5gZnKqeeVMHwSD-Gh1lAi6_CTnMJzRzuUIj7Ydrf0pLbgSZ_PvSpZtF1XAz2B12HMggMfeKGPaPUSJrkbFbYG0pKAHjWSzpgti05Tl7ENsuqjJnY9rzUnLOQc1QQStfNxXdMZalYmIHqzw1spd2uGTAcS8vXKcrb2dfsaKZmsOUrPqEIRzAnKU5JUBS02-O/p.jpeg?is_prewarmed=true" alt="Her Photo for No" />
+    </div>
+
+    <!-- Yes and No buttons -->
+    <form action="https://formspree.io/f/mgvebqel" method="POST" id="responseForm">
+      <input type="hidden" name="response" value="Yes">
+      <div class="button-container">
+        <button type="button" class="button" onclick="showResponse('Yes')">Yes</button>
+        <button type="button" class="button" onclick="showResponse('No')">No</button>
+      </div>
+    </form>
+
+    <!-- Response message box -->
+    <div class="response-box">
+      <textarea name="message" placeholder="Any honorable mentions?😤😤"></textarea>
+    </div>
+
+    <!-- Footer with credits or additional info -->
+    <footer>
+      <p>Made with 💖 by Ganzz</p>
+    </footer>
+  </div>
+
+  <!-- Floating Stars -->
+  <div class="floating-stars">
+    <div class="star" style="top: 10%; left: 25%;"></div>
+    <div class="star" style="top: 40%; left: 50%;"></div>
+    <div class="star" style="top: 70%; left: 80%;"></div>
+    <div class="star" style="top: 90%; left: 10%;"></div>
+  </div>
+
+  <!-- Floating Moons -->
+  <div class="floating-moons">
+    <div class="moon" style="top: 20%; left: 30%;"></div>
+    <div class="moon" style="top: 50%; left: 70%;"></div>
+  </div>
+
+  <script>
+    // Show response in the form
+    function showResponse(response) {
+      const form = document.getElementById('responseForm');
+      form.elements['response'].value = response;
+
+      // Submit the form after a small delay (for animation)
+      setTimeout(function() {
+        form.submit();
+      }, 500); // 500ms delay for smooth interaction
+    }
+  </script>
+
+</body>
+</html>
